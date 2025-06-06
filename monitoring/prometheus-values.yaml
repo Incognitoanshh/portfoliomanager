@@ -1,0 +1,16 @@
+# prometheus-values.yaml (simplified for demo)
+alertmanager:
+  enabled: true
+
+prometheus:
+  prometheusSpec:
+    serviceMonitorSelectorNilUsesHelmValues: false
+
+grafana:
+  adminPassword: admin
+  service:
+    type: ClusterIP
+  ingress:
+    enabled: false
+
+---
